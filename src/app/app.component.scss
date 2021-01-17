@@ -80,3 +80,26 @@
   padding-top: 10px;
 }
 
+.item-wrap{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  border-bottom: 1px solid #bdc3c7;
+}
+
+.icon-wrap{
+  width: 50px;
+  height: 100%;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 17px;
+}
+
+.text-input{
+  width: 100%;
+  border: none;
+}
+
+.text-input:focus{
+  outline: none;
+}

@@ -6,6 +6,7 @@
 }
 
 .left-slider{
+  border: 1px solid white;
   width: 300px;
   height: 92vh;
   background-color: #2c3e50;
@@ -40,4 +41,40 @@
   width: 80%;
   height: 3px;
   background-color: white;
+}
+
+//===================
+.txt-welcome{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
+//-------------
+.nav-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li{
+
+    padding: 5px 15px;
+    background-color: #34495e;
+    border-left: 5px solid #34495e;
+
+    a{
+      text-decoration: none;
+      color: white;
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+      font-size: 16px;
+    }
+
+  }
+
+  li:hover{
+    cursor: pointer;
+    border-left: 5px solid #2980b9;
+  }
+
 }

@@ -1,0 +1,53 @@
+#footer {
+  bottom: 0px;
+  height: 240px;
+  background-color: black;
+  color: white;
+  width: 100vw;
+}
+
+.InnerSection {
+  float: left;
+  margin: 0 28px;
+  width: 20%;
+}
+
+.InnerHeading {
+  font-weight: 500;
+  color: gray;
+}
+
+ol {
+  list-style: none;
+}
+
+li {
+  margin: 10px 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+}
+
+.SocialIcon {
+  height: 28px;
+  border-radius: 7px;
+}
+
+#IconList {
+  display: flex;
+}
+#IconList li {
+  margin: 0 10px;
+}
+.Credits {
+  margin-top: 20px;
+  width: 100vw;
+  text-align: center;
+  float: left;
+}

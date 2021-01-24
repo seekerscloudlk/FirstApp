@@ -10,6 +10,8 @@ import {FormsModule} from '@angular/forms';
 import { DashBoardComponent } from './components/dash-board/dash-board.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import {RouterModule} from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -17,7 +19,9 @@ import {RouterModule} from '@angular/router';
   declarations: [
     AppComponent,
     DashBoardComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

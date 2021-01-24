@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -6,7 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent implements OnInit {
-  ngOnInit(): void {
+
+  /* showMyData() {
+     alert(
+       'User Name: ' + this.userName +
+       '\nPassword: ' + this.password
+
+     );
+   }*/
+
+  constructor(private router: Router) {
+  }
+
+  accessDashBoard(){
+    // Angular Routing
+    // --------------
+    this.router.navigate(['/DashBoard']).then(resp => {
+      console.log('Done');
+    }).catch(error => {
+      console.log(error);
+    });
 
   }
 
@@ -21,19 +41,9 @@ export class LoginFormComponent implements OnInit {
    myCustomVar='';*/
   userName = '';
   password = '';
+  ngOnInit(): void {
 
-  /* showMyData() {
-     alert(
-       'User Name: ' + this.userName +
-       '\nPassword: ' + this.password
-
-     );
-   }*/
-
-
-  accessDashBoard(){
-    // Angular Routing
-    // --------------
   }
+
 
 }

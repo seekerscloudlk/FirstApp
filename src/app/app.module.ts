@@ -9,6 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
 import { DashBoardComponent } from './components/dash-board/dash-board.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import {RouterModule} from '@angular/router';
 
 
 
@@ -24,7 +25,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     BrowserAnimationsModule,
     MatCheckboxModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

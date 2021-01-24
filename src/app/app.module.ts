@@ -6,18 +6,25 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
+import {FormsModule} from '@angular/forms';
+import { DashBoardComponent } from './components/dash-board/dash-board.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashBoardComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

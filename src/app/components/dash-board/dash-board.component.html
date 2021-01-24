@@ -1,10 +1,15 @@
 <nav class="nav-bar">
-  <div class="ham-wrap">
+  <div class="ham-wrap" (click)="toggleSlide()">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
   </div>
 </nav>
-<div class="left-slider">
+
+
+<div class="left-slider" *ngIf="leftSideVisibleState" [@sliderLeft]>
 
 </div>
+
+
+<router-outlet></router-outlet>

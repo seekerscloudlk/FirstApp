@@ -12,6 +12,9 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import {RouterModule} from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DefaultPageComponent } from './components/dash-board/pages/default-page/default-page.component';
+import { RegisterHotelPageComponent } from './components/dash-board/pages/register-hotel-page/register-hotel-page.component';
+import { CardsComponent } from './components/dash-board/pages/default-page/items/cards/cards.component';
 
 
 
@@ -21,7 +24,10 @@ import { FooterComponent } from './components/footer/footer.component';
     DashBoardComponent,
     LoginFormComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DefaultPageComponent,
+    RegisterHotelPageComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

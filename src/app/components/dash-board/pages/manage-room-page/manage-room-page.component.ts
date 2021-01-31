@@ -9,6 +9,16 @@ export class ManageRoomPageComponent implements OnInit {
 
   constructor() { }
 
+  roomTypeArray: string[] = [
+      'Single',
+      'Double',
+      'Triple',
+      'Quad',
+      'Queen',
+      'King',
+      'Twin',
+  ];
+
   ngOnInit(): void {
   }
 

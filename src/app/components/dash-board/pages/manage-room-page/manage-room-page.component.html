@@ -1,1 +1,30 @@
-<p>manage-room-page works!</p>
+<div class="main-wrap container">
+  <p class="header-text">Room Configuration</p>
+  <hr>
+
+  <div class="row" style="margin: 0">
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+      <div class="form-group">
+        <label for="roomName">Room Name</label>
+        <input type="text" class="form-control" id="roomName"
+               aria-describedby="roomNameHelp" placeholder="Single">
+      </div>
+
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+      <div class="form-group">
+        <label for="roomType">Room Type</label>
+        <select class="form-control" id="roomType">
+          <option *ngFor="let tempType of roomTypeArray" value="{{tempType}}">{{tempType}}</option>
+        </select>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

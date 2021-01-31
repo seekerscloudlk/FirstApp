@@ -25,6 +25,73 @@
 
     </div>
 
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+      <div class="form-group">
+        <label for="sleeps">Sleeps</label>
+        <input type="number" class="form-control" id="sleeps"
+               aria-describedby="sleepsHelp">
+      </div>
+
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+      <div class="form-group">
+        <label for="cost">Cost (per day)</label>
+        <input type="number" class="form-control" id="cost"
+               aria-describedby="costHelp">
+      </div>
+
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+      <div class="form-group">
+        <label for="count">Room Count</label>
+        <input type="number" class="form-control" id="count"
+               aria-describedby="countHelp">
+      </div>
+
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+      <div class="form-group">
+        <label for="size">Room Size (ft <sup>2</sup> )</label>
+        <input type="number" class="form-control" id="size"
+               aria-describedby="sizeHelp">
+      </div>
+
+    </div>
+
+    <div class="col-12">
+
+      <div class="form-group">
+        <label for="facilities">Most popular facilities</label>
+        <input maxlength="50" [(ngModel)]="selectedFacilities" (keyup.enter)="addToList()" type="text" class="form-control" id="facilities"
+               aria-describedby="facilitiesHelp">
+        <p *ngIf="selectedFacilitiesError" class="alert alert-danger" style="margin-top: 3px">
+          this value is required!
+        </p>
+      </div>
+
+    </div>
+
+    <div class="col-12 facilities-List">
+
+      <ul class="facilities">
+        <li *ngFor="let tempFac of facilitiesList; index as num">
+          <span>{{tempFac}} &nbsp;&nbsp; <i class="fas fa-times"
+                                            style="cursor: pointer"
+                                            (click)="removeFromList(num)"></i></span>
+        </li>
+      </ul>
+
+    </div>
+
+
+
   </div>
 
 </div>

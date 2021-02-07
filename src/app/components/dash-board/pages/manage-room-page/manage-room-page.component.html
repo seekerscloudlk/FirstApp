@@ -68,6 +68,17 @@
     </div>
 
     <div class="col-12">
+      <mat-checkbox [(ngModel)]="txtPetAllowed" class="example-margin">Pet Allowed</mat-checkbox>
+    </div>
+
+    <div class="col-12">
+      <div class="form-group">
+        <label for="descriptionId">Description</label>
+        <textarea [(ngModel)]="txtDescription" class="form-control" id="descriptionId" rows="3"></textarea>
+      </div>
+    </div>
+
+    <div class="col-12">
 
       <div class="form-group">
         <label for="facilities">Most popular facilities</label>

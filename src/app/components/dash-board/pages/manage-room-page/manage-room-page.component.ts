@@ -36,6 +36,8 @@ export class ManageRoomPageComponent implements OnInit {
   txtRoomCost = 0;
   txtRoomCount = 0;
   txtRoomSize = 0;
+  txtPetAllowed = false;
+  txtDescription='';
 
   ngOnInit(): void {
   }
@@ -125,13 +127,14 @@ export class ManageRoomPageComponent implements OnInit {
       this.txtRoomCost,
       this.txtRoomCount,
       this.txtRoomSize,
-      '',
-      '',
-      '',
+      this.txtDescription,
+      this.txtPetAllowed,
+      [],
       this.facilitiesList,
       false,
       []
     );
+    console.log(dto);
   }
 }
 

@@ -26,6 +26,9 @@ export class ManageRoomPageComponent implements OnInit {
 
   facilitiesList: string[] = [];
 
+  filesToUpload: Array<File> = [];
+  urls = new Array<string>();
+
   ngOnInit(): void {
   }
 
@@ -34,7 +37,7 @@ export class ManageRoomPageComponent implements OnInit {
     if (this.selectedFacilities.trim().length > 0) {
       if (!this.isExists(this.selectedFacilities.trim())) {
         this.facilitiesList.push(this.selectedFacilities.trim());
-        this.selectedFacilities='';
+        this.selectedFacilities = '';
       }else{
         alert('This record is already exists!');
         this.selectedFacilities = '';
@@ -66,37 +69,35 @@ export class ManageRoomPageComponent implements OnInit {
 
   }
 
-  filesToUpload:Array<File>=[];
-  urls= new Array<string>();
-
   changeFiles(event) {
 
-    this.filesToUpload=event.target.files as Array<File>;
-    this.urls=[];
-
-    const files=event.target.files;
-
-    if (files){
-      for(const file of files){
-        const reader= new FileReader();
-        reader.onload=(e:any)=>{
-          if (file.type==='image/jpeg' || file.type==='image/jpg' ||
-            file.type==='image/png'){
-            if (Number(e.total)>2e+6){
-              alert('Please make sure that you entered image size is less than MB');
-              this.filesToUpload=[];
+    this.filesToUpload = event.target.files as Array<File>;
+    this.urls = [];
+    const files = event.target.files;
+    if (files) {
+      for (const file of files) {
+        const reader = new FileReader();
+        reader.onload = (e: any) => {
+          if (file.type === 'image/jpeg' || file.type === 'image/jpg' || file.type === 'image/png') {
+            if (Number(e.total) > 2e+6) {
+              alert('Please make sure that you entered image size is less than 2MB');
+              this.filesToUpload = [];
               return;
-            }else{
+            } else {
               this.urls.push(e.target.result);
             }
-          }else{
+          } else {
             alert('Supported formats: .JPEG .JPG .PNG');
-            this.filesToUpload=[];
+            this.filesToUpload = [];
             return;
           }
-        }
+
+
+        };
+        reader.readAsDataURL(file);
       }
     }
 
   }
 }
+

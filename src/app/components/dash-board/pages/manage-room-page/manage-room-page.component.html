@@ -10,7 +10,7 @@
 
       <div class="form-group">
         <label for="roomName">Room Name</label>
-        <input type="text" class="form-control" id="roomName"
+        <input [(ngModel)]="txtRoomName" type="text" class="form-control" id="roomName"
                aria-describedby="roomNameHelp" placeholder="Single">
       </div>
 
@@ -20,7 +20,7 @@
 
       <div class="form-group">
         <label for="roomType">Room Type</label>
-        <select class="form-control" id="roomType">
+        <select [(ngModel)]="txtRoomType" class="form-control" id="roomType">
           <option *ngFor="let tempType of roomTypeArray" value="{{tempType}}">{{tempType}}</option>
         </select>
       </div>
@@ -31,7 +31,7 @@
 
       <div class="form-group">
         <label for="sleeps">Sleeps</label>
-        <input type="number" class="form-control" id="sleeps"
+        <input [(ngModel)]="txtRoomSleeps" type="number" class="form-control" id="sleeps"
                aria-describedby="sleepsHelp">
       </div>
 
@@ -41,7 +41,7 @@
 
       <div class="form-group">
         <label for="cost">Cost (per day)</label>
-        <input type="number" class="form-control" id="cost"
+        <input [(ngModel)]="txtRoomCost" type="number" class="form-control" id="cost"
                aria-describedby="costHelp">
       </div>
 
@@ -51,7 +51,7 @@
 
       <div class="form-group">
         <label for="count">Room Count</label>
-        <input type="number" class="form-control" id="count"
+        <input [(ngModel)]="txtRoomCount" type="number" class="form-control" id="count"
                aria-describedby="countHelp">
       </div>
 
@@ -61,7 +61,7 @@
 
       <div class="form-group">
         <label for="size">Room Size (ft <sup>2</sup> )</label>
-        <input type="number" class="form-control" id="size"
+        <input [(ngModel)]="txtRoomSize" type="number" class="form-control" id="size"
                aria-describedby="sizeHelp">
       </div>
 

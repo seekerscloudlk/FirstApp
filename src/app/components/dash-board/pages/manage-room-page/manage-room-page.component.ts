@@ -30,6 +30,12 @@ export class ManageRoomPageComponent implements OnInit {
 
   filesToUpload: Array<File> = [];
   urls = new Array<string>();
+  txtRoomName = '';
+  txtRoomType = '';
+  txtRoomSleeps = 0;
+  txtRoomCost = 0;
+  txtRoomCount = 0;
+  txtRoomSize = 0;
 
   ngOnInit(): void {
   }
@@ -113,18 +119,18 @@ export class ManageRoomPageComponent implements OnInit {
     console.log(sampleId);
     const dto = new RoomDTO(
       sampleId,
+      this.txtRoomName.trim(),
+      this.txtRoomType.trim(),
+      this.txtRoomSleeps,
+      this.txtRoomCost,
+      this.txtRoomCount,
+      this.txtRoomSize,
       '',
       '',
       '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      ''
+      this.facilitiesList,
+      false,
+      []
     );
   }
 }

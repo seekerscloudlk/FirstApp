@@ -1,0 +1,68 @@
+.header-wrap{
+  width: 100%;
+  height: 90px;
+  background-color: #34495e;
+}
+.txt-Business-Name {
+  color: white;
+  font-size: 22px;
+  font-family: 'Yusei Magic', sans-serif;
+  padding: 20px 50px;
+  position: absolute;
+  cursor: pointer;
+
+  span {
+    color: #3B5998;
+  }
+
+
+}
+
+.navigate-wrap{
+  height: 200px;
+  background-color: #bdc3c7;
+  padding: 20px 50px;
+}
+
+.tittle{
+  font-size: 20px;
+  font-style: italic;
+  color: #2c3e50;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tittle2{
+  font-size: 12px;
+  color: white;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.middle-wrap{
+  background-color: #d35400;
+  height: auto;
+}
+
+.inner-component-wrap{
+  height: 50px;
+  border-radius: 3px;
+  padding: 3px;
+}
+.component{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 3px;
+}
+.search-button{
+  background-color: #3498db;
+  color: white;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 3px;
+}
+.search-button:focus{
+  outline: none;
+}

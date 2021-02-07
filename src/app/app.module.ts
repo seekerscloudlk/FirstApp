@@ -20,6 +20,9 @@ import { ManageReservationComponent } from './components/dash-board/pages/manage
 import { ReviewsPageComponent } from './components/dash-board/pages/reviews-page/reviews-page.component';
 import { SignOutPageComponent } from './components/dash-board/pages/sign-out-page/sign-out-page.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { DefaultMainPageComponent } from './components/default-main-page/default-main-page.component';
+import { ResultPageComponent } from './components/result-page/result-page.component';
+import { UniqueResultPageComponent } from './components/unique-result-page/unique-result-page.component';
 
 
 
@@ -36,7 +39,10 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     ManageRoomPageComponent,
     ManageReservationComponent,
     ReviewsPageComponent,
-    SignOutPageComponent
+    SignOutPageComponent,
+    DefaultMainPageComponent,
+    ResultPageComponent,
+    UniqueResultPageComponent
   ],
   imports: [
     BrowserModule,

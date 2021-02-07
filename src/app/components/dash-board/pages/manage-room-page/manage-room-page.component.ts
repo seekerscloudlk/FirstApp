@@ -72,6 +72,31 @@ export class ManageRoomPageComponent implements OnInit {
   changeFiles(event) {
 
     this.filesToUpload=event.target.files as Array<File>;
+    this.urls=[];
+
+    const files=event.target.files;
+
+    if (files){
+      for(const file of files){
+        const reader= new FileReader();
+        reader.onload=(e:any)=>{
+          if (file.type==='image/jpeg' || file.type==='image/jpg' ||
+            file.type==='image/png'){
+            if (Number(e.total)>2e+6){
+              alert('Please make sure that you entered image size is less than MB');
+              this.filesToUpload=[];
+              return;
+            }else{
+              this.urls.push(e.target.result);
+            }
+          }else{
+            alert('Supported formats: .JPEG .JPG .PNG');
+            this.filesToUpload=[];
+            return;
+          }
+        }
+      }
+    }
 
   }
 }

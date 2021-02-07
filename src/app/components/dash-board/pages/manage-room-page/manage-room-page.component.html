@@ -1,3 +1,5 @@
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+
 <div class="main-wrap container">
   <p class="header-text">Room Configuration</p>
   <hr>
@@ -101,14 +103,18 @@
 
       <div class="main-wrap-for-selected-images">
 
-        <img [src]="urls[0]" alt="Image"
+        <img *ngIf="urls[0]!=null" [src]="urls[0]" alt="Image"
              class="selected-image img-thumbnail">
-        <img [src]="urls[1]" alt="Image"
+        <img *ngIf="urls[1]!=null"  [src]="urls[1]" alt="Image"
              class="selected-image img-thumbnail">
-        <img [src]="urls[2]" alt="Image"
+        <img *ngIf="urls[2]!=null"  [src]="urls[2]" alt="Image"
              class="selected-image img-thumbnail">
 
       </div>
+
+      <p style="text-align: right">
+        <button mat-raised-button color="primary" (click)="uploadRoomData()">Upload Data</button><!--float : right-->
+      </p>
 
 
     </div>

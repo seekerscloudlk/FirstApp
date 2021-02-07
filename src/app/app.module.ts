@@ -19,6 +19,7 @@ import { ManageRoomPageComponent } from './components/dash-board/pages/manage-ro
 import { ManageReservationComponent } from './components/dash-board/pages/manage-reservation/manage-reservation.component';
 import { ReviewsPageComponent } from './components/dash-board/pages/reviews-page/reviews-page.component';
 import { SignOutPageComponent } from './components/dash-board/pages/sign-out-page/sign-out-page.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 
@@ -44,7 +45,8 @@ import { SignOutPageComponent } from './components/dash-board/pages/sign-out-pag
     MatCheckboxModule,
     MatButtonModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

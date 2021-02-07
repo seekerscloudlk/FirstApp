@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import RoomDTO from '../../../../dto/RoomDTO';
+import * as CryptoJS from 'crypto-js';
 
 @Component({
   selector: 'app-manage-room-page',
@@ -98,6 +100,32 @@ export class ManageRoomPageComponent implements OnInit {
       }
     }
 
+  }
+
+  uploadRoomData() {
+
+    let sampleId = '';
+    try{
+      sampleId = CryptoJS.AES.encrypt(Math.random(), 'secret key 123').toString();
+    }catch (e) {
+      console.log(e);
+    }
+    console.log(sampleId);
+    const dto = new RoomDTO(
+      sampleId,
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      ''
+    );
   }
 }
 

@@ -65,4 +65,13 @@ export class ManageRoomPageComponent implements OnInit {
 
 
   }
+
+  filesToUpload:Array<File>=[];
+  urls= new Array<string>();
+
+  changeFiles(event) {
+
+    this.filesToUpload=event.target.files as Array<File>;
+
+  }
 }
